@@ -9,18 +9,18 @@ const permalink = Astro.site.href;
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
     <div class="home-copy">
-      <h1>Welcome to your new Astro Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
+      <h2>Welcome to</h2>
+      <h1>Dataextract Co</h1>
+      <p>The window to the information that you need.</p>
     </div>
-
     <div class="hero-image-container">
       <picture>
-        <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)">
-        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466">
+        <source srcset="/assets/pc3dcrop.gif" media="(min-width: 600px)">
+        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/pc3dcrop.gif" width="550" height="466">
       </picture>
       <p class="caption">
         Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
+        <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA" target="_blank" rel="noopener">Icons 8</a>
         from
         <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
       </p>
@@ -34,13 +34,13 @@ const permalink = Astro.site.href;
     display: flex;
     flex: 1;
     justify-content: center;
-    margin: 2em 0;
+    margin: 0 0;
     min-height: 400px;
   }
 
   .home-copy {
     flex: 1;
-    padding: 0 1em;
+    padding: 0 0em;
   }
 
   .home-copy h1 {
@@ -54,7 +54,7 @@ const permalink = Astro.site.href;
   }
 
   .hero-image-container {
-    margin: 0 1em;
+    margin: 0 0;
     text-align: center;
   }
 
@@ -72,7 +72,6 @@ const permalink = Astro.site.href;
   .hero-image {
     width: 100%;
     max-width: 550px;
-    margin-bottom: 1em;
   }
 
   @media (max-width: 1200px) {
@@ -92,7 +91,7 @@ const permalink = Astro.site.href;
 
     .home-copy {
       flex: 0;
-      padding-bottom: 2em;
+      padding-bottom: 0;
       text-align: center;
     }
   }
