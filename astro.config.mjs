@@ -20,6 +20,6 @@ export default defineConfig({
       target: '_blank'
     }]]
   },
-  output: "server",
-  adapter: vercel()
+  // output: "hybrid",
+  // adapter: vercel()
 });

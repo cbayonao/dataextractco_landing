@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
 import sendGrid from '@sendgrid/mail';
+import BaseLayout from '../layouts/BaseLayout.astro';
+sendGrid.setApiKey( import.meta.env.SENDGRID_API_KEY );
 
 const title = 'My Astro Blog';
 const description = 'The perfect starter for your perfect blog.';
-const permalink = Astro.site?.href;
+const permalink = `${Astro.site?.href}contact`;
 
-sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
 if (Astro.request.method === 'POST') {
     try {
         const data = await Astro.request.formData();
@@ -26,13 +26,12 @@ if (Astro.request.method === 'POST') {
             Message: ${message}`,
         }
         await sendGrid.send(msg).then(() => {
-            console.log('Email sent');
-        }).catch((err) => {
-            console.error(err);
-        })
-    }
-    catch (err) {
-        console.error(err);
+            console.log('Email sent')
+        }).catch((error) => {
+            console.error(error)
+        });
+    } catch (error) {
+        console.error(error);
     }
 }
 ---
