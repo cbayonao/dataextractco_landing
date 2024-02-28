@@ -4,13 +4,13 @@ import mdx from '@astrojs/mdx';
 import remarkGfm from 'remark-gfm';
 import remarkSmartypants from 'remark-smartypants';
 import rehypeExternalLinks from 'rehype-external-links';
-import node from "@astrojs/node";
+import vercelServerless from "@astrojs/vercel/serverless";
 
-import vercel from "@astrojs/vercel/serverless";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), svelte()],
+  integrations: [mdx(), svelte(), react()],
   markdown: {
     shikiConfig: {
       theme: 'nord'
@@ -20,6 +20,6 @@ export default defineConfig({
       target: '_blank'
     }]]
   },
-  // output: "hybrid",
-  // adapter: vercel()
+  output: "server",
+  adapter: vercelServerless()
 });
